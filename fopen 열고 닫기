@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(void) {
+	printf("hello\n");
+	FILE* fp;
+	fopen_s(&fp, "a.txt", "r");
+	if (fp == NULL)
+	{
+		printf("파일 없거나 열리지 않음\n");
+		return 1;
+	}
+	printf("파일 열림\n");
+	fclose(fp);
+
+	return 0;
+}
